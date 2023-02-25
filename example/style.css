@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(14, 14, 14);
+    color: rgb(231, 231, 231);
+    font-family: Prompt;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    font-weight: 400;
+}
+
+#title {
+    font-weight: 500;
+    font-size: 25px;
+    padding-top: 80px;
+}
+
+#title2 {
+    color: rgb(179, 179, 179);
+    padding-top: 14px;
+}
+
+#drag {
+    width: 560px;
+    height: 345px;
+    position: fixed;
+    border-radius: 12px;
+    background: rgb(29 29 29 / 83%);
+    backdrop-filter: saturate(17) blur(100px) contrast(.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 350px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 12px 28px 0px, rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(255 255 255 / 5%) 0px 0px 0px 1px inset;
+    z-index: 1;
+}
+
+#github {
+    z-index: 1;
+    opacity: .65;
+    top: 25px;
+}
+
+#github:hover {
+    opacity: .35;
+}
+
+.gradient {
+    width: 600px;
+    height: 600px;
+    filter: blur(calc(600px / 5)) brightness(.5);
+    background-image: linear-gradient(#c8a5ff, #378dc1, #0e0049);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: rotate 34s cubic-bezier(0.8, 0.2, 0.2, 0.8) infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    0% {
+        opacity: .45;
+        transform: scale(2) translate(-50%, -50%);
+    }
+
+    50% {
+        opacity: .25;
+        transform: scale(1.69) translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: .45;
+        transform: scale(2) translate(-50%, -50%);
+    }
+}
